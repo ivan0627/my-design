@@ -1,0 +1,103 @@
+
+.home_container{
+    margin: auto;
+    margin-top: 1em;
+    display: flex;
+    min-height: 70vh;
+    max-width: 70%;
+    
+}
+.home_container div{
+    margin: 0.5em;
+}
+
+#live{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../images/Home/home_live.jpg');
+    min-width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    
+}
+#live:hover{
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 2.7s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/Home/home_live.jpg');
+}
+#live:visited, #live:active{
+    color: white;
+}
+
+h2{
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 2em;
+}
+
+.apartado{
+    display: flex;
+    min-width: 50%;
+    flex-direction: column;
+    
+}
+
+.apartado div{
+    margin: 0;
+}
+#kitchen{
+    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../images/Home/home_kitchen.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1em;
+}
+#kitchen:hover{
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 2.7s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/Home/home_kitchen.jpg');
+}
+#bedroom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../images/Home/home_bedroom.jpg');
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    display: flex;
+    align-items: flex-end;
+   
+}
+#bedroom:hover{
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 2.7s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/Home/home_bedroom.jpg');
+}
+#all{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),  url('../images/Home/home_all.jpg');
+    min-width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+#all:hover{
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 2.7s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/Home/home_all.jpg');
+}
+
+@media only screen and (max-width: 686px){
+    .home_container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #live, #bedroom, #kitchen, #all{
+        min-height: 20em;
+        background-position: 0% 50%;
+    }
+}
