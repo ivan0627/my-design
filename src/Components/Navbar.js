@@ -1,14 +1,18 @@
 import React from "react"
 import '../styles/Navbar.css'
 import designLogo from '../images/logo-black.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate();
+    const handleClickHome = () =>{
+        navigate(`/Home`)
+    }
     return(
     <div className="navbar_container">   
         
         <div className="logo_container">
-            <img src= {designLogo} ></img>
+            <img src= {designLogo} onClick={handleClickHome}></img>
         </div>
         
         <nav className="navbar">

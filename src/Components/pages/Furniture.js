@@ -2,7 +2,9 @@ import React from "react";
 
 function Furniture () {
     return(
-        <div></div>
+        <div>
+            <p>Funiture</p>
+        </div>
     )
 }
 
