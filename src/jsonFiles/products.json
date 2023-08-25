@@ -10,7 +10,7 @@
         {"type": "wardrobe", "id": 8, "name": "Two-Door Wardrobe", "description": "A compact wardrobe with hanging and folding space.", "price": 280, "image": "../images/products/wardrobe_8.jpg"},
         {"type": "chair", "id": 9, "name": "Ergonomic Chair", "description": "An ergonomically designed chair for long hours of work.", "price": 120, "image": "../images/products/chair_9.jpg"},
         {"type": "bed", "id": 10, "name": "Queen Bed", "description": "A spacious bed for two people.", "price": 350, "image": "../images/products/bed_10.jpg"},
-        /*{"type": "sofa", "id": 11, "name": "Sectional Sofa", "description": "A sectional sofa that adapts to different spaces.", "price": 600, "image": "../images/products/sofa_11.jpg"},
+        {"type": "sofa", "id": 11, "name": "Sectional Sofa", "description": "A sectional sofa that adapts to different spaces.", "price": 600, "image": "../images/products/sofa_11.jpg"},
         {"type": "table", "id": 12, "name": "Modern Coffee Table", "description": "A coffee table with a modern design.", "price": 180, "image": "../images/products/table_12.jpg"},
         {"type": "shelf", "id": 13, "name": "Floating Shelf", "description": "A floating shelf for displaying decorative items.", "price": 50, "image": "../images/products/shelf_13.jpg"},
         {"type": "bed", "id": 14, "name": "Kids Bed", "description": "A fun and safe bed for children.", "price": 120, "image": "../images/products/bed_14.jpg"},
@@ -19,7 +19,7 @@
         {"type": "chair", "id": 17, "name": "Dining Chair", "description": "A comfortable chair for the dining area.", "price": 90, "image": "../images/products/chair_17.jpg"},
         {"type": "sofa", "id": 18, "name": "Reclining Sofa", "description": "A sofa with reclining function.", "price": 550, "image": "../images/products/sofa_18.jpg"},
         {"type": "table", "id": 19, "name": "Folding Table", "description": "A folding table ideal for small spaces.", "price": 120, "image": "../images/products/table_19.jpg"},
-        {"type": "shelf", "id": 20, "name": "Bookshelf", "description": "A shelf designed to organize your books.", "price": 70, "image": "../images/products/shelf_20.jpg"}*/
+        {"type": "shelf", "id": 20, "name": "Bookshelf", "description": "A shelf designed to organize your books.", "price": 70, "image": "../images/products/shelf_20.jpg"}
     ],
     "kitchen": [
         {"type": "utensil", "id": 1, "name": "Knife Set", "description": "A complete set of kitchen knives.", "price": 50, "image": "../images/products/utensil_1.jpg"},
