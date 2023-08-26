@@ -1,8 +1,8 @@
 import React from "react";
 import products from '../../jsonFiles/products.json'
+import '../../styles/products.css'
+
 import classicChairImage from '../../images/products/chair_1.jpg';
-
-
 import oakTableImage from '../../images/products/table_2.jpg';
 import leatherSofaImage from '../../images/products/sofa_3.jpg';
 import modularShelfImage from '../../images/products/shelf_4.jpg';
@@ -135,7 +135,7 @@ function Products () {
 
 
     return(
-        <div>
+    
             <div className="productsContainer">
                 {
                      products.furniture.map(product => {
@@ -149,18 +149,65 @@ function Products () {
                             </div>
 
                             <h3 className="productName">{product.name}</h3>
-                            <br></br>
+                            <p id="productDescription">{product.description}</p>
+                            <div className="priceAndButton">
                             
-                            <p>{product.description}</p>
-                            <p>${product.price}</p>
+                            <h4 id="price">${product.price}</h4>
+                            <button>Add to the cart</button>
+                            </div>
                         </div>
 
                     )})
+                        }
+
+                   { products.kitchen.map(product => {
+                        const imagePath = imageMappings[product.name];
+
+                        return(
+                        <div className="productIndividual">
+                            
+                            <div className="productImage">
+                                <img src={imagePath} alt={`${product.name}`}/>
+                            </div>
+
+                            <h3 className="productName">{product.name}</h3>
+                            <p id="productDescription">{product.description}</p>
+                            <div className="priceAndButton">
+                            
+                            <h4 id="price">${product.price}</h4>
+                            <button>Add to the cart</button>
+                            </div>
+
+                        </div>
+
+                    )})
+                    
+                }
+                { products.room.map(product => {
+                        const imagePath = imageMappings[product.name];
+
+                        return(
+                        <div className="productIndividual">
+                           <div className="productImage">
+                                <img src={imagePath} alt={`${product.name}`}/>
+                            </div>
+
+                            <h3 className="productName">{product.name}</h3>
+                            <p id="productDescription">{product.description}</p>
+                            <div className="priceAndButton">
+                            
+                            <h4 id="price">${product.price}</h4>
+                            <button>Add to the cart</button>
+                            </div>
+                        </div>
+
+                    )})
+                    
                 }
 
             </div>
 
-        </div>
+        
     )
 }
 

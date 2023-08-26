@@ -1,0 +1,53 @@
+
+.productsContainer{
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.productsContainer h3{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.productIndividual{
+    width: 15em;
+    margin: 2em;
+    
+}
+.productIndividual p{
+    min-height: 3em;
+    text-align: center;
+}
+
+.productImage{
+    width: 15em;
+    height: 19em;
+}
+.productImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.priceAndButton{
+    margin-top: 0.8em;
+    display: flex;
+    
+
+}
+.priceAndButton h4{
+    margin: auto;
+}
+.priceAndButton button{
+    margin: auto;
+    background-color: white;
+    color: black;
+    border-color: black;
+    padding: 0.6em;
+}
+.priceAndButton button:hover{
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+}
