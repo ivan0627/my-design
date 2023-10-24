@@ -1,67 +1,42 @@
-import React from "react";
-import products from '../../jsonFiles/products.json'
+import React, {useEffect, useState} from "react";
 import '../../styles/products.css'
 
 
-import classicChairImage from '../../images/products/chair_1.jpg';
-import oakTableImage from '../../images/products/table_2.jpg';
-import leatherSofaImage from '../../images/products/sofa_3.jpg';
-import modularShelfImage from '../../images/products/shelf_4.jpg';
-import singleBedImage from '../../images/products/bed_5.jpg';
-import woodenDeskImage from '../../images/products/desk_6.jpg';
-import sideTableImage from '../../images/products/side_table_7.jpg';
-import twoDoorWardrobeImage from '../../images/products/wardrobe_8.jpg';
-import ergonomicChairImage from '../../images/products/chair_9.jpg';
-import queenBedImage from '../../images/products/bed_10.jpg';
-import sectionalSofaImage from '../../images/products/sofa_11.jpg';
-import modernCoffeeTableImage from '../../images/products/table_12.jpg';
-import floatingShelfImage from '../../images/products/shelf_13.jpg';
-import kidsBedImage from '../../images/products/bed_14.jpg';
-import coffeeSideTableImage from '../../images/products/side_table_15.jpg';
-import clothingWardrobeImage from '../../images/products/wardrobe_16.jpg';
-import diningChairImage from '../../images/products/chair_17.jpg';
-import recliningSofaImage from '../../images/products/sofa_18.jpg';
-import foldingTableImage from '../../images/products/table_19.jpg';
-import bookshelfImage from '../../images/products/shelf_20.jpg';
-
-
-function Furniture () {
-
-    const imageMappings = {
-        "Classic Chair": classicChairImage,
-        "Oak Table": oakTableImage,
-        "Leather Sofa": leatherSofaImage,
-        "Modular Shelf": modularShelfImage,
-        "Single Bed": singleBedImage,
-        "Wooden Desk": woodenDeskImage,
-        "Side Table": sideTableImage,
-        "Two Door Wardrobe": twoDoorWardrobeImage,
-        "Ergonomic Chair": ergonomicChairImage,
-        "Queen Bed": queenBedImage,
-        "Sectional Sofa": sectionalSofaImage,
-        "Modern Coffee Table": modernCoffeeTableImage,
-        "Floating Shelf": floatingShelfImage,
-        "Kids Bed": kidsBedImage,
-        "Coffee Side Table": coffeeSideTableImage,
-        "Clothing Wardrobe": clothingWardrobeImage,
-        "Dining Chair": diningChairImage,
-        "Reclining Sofa": recliningSofaImage,
-        "Folding Table": foldingTableImage,
-        "Bookshelf": bookshelfImage}
-
-
-    return(
+function Furniture (props) {
+    
+    const [items, setItems] = useState([]);
+        const getItems = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/items/category/${props.category}`);
+                const jsonData = await response.json();
+                setItems(jsonData);
+                
+            } catch (err) {
+                console.error(err.message);
+            }
+        }
         
-        <div className="productsContainer">
+
+        useEffect(() => {
+            getItems();
+            
+        }, [props.category]);
+        return(
+    
+            
+            <div className="productsContainer">
                 {
-                     products.furniture.map(product => {
-                        const imagePath = imageMappings[product.name];
+                     items.map(product => {
+
+                        const anexo = product.image.split('/')[3];
+                       
+
 
                         return(
                         <div className="productIndividual">
                             
                             <div className="productImage">
-                                <img src={imagePath} alt={`${product.name}`}/>
+                                <img src= {require('../../images/products/' + anexo)} alt={`${product.name}`}/>
                             </div>
 
                             <h3 className="productName">{product.name}</h3>
@@ -75,8 +50,12 @@ function Furniture () {
 
                     )})
                         }
+                    
+              
+
             </div>
 
+        
     )
 }
 

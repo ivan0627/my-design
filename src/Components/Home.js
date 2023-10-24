@@ -5,6 +5,10 @@ import live from '../images/Home/home_live.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 
 
+import kingBedImage from '../images/products/bed_1.jpg';
+import threeDoorWardrobeImage from '../images/products/wardrobe_2.jpg';
+import deskWithShelvesImage from '../images/products/desk_3.jpg';
+
 function Home () {
 
 const navigate = useNavigate();
@@ -16,10 +20,12 @@ const handleClickFurniture = () =>{
 const handleClickRoom = () =>{
     navigate(`/room`)}
 const handleClickAll= () =>{
-    navigate(`/products`)}
+    navigate(`/ProductsAPI`)}
 
     return(
         <div>
+
+
             <div className="home_container">
                 
                 <div id="live" onClick={handleClickFurniture}>
@@ -39,7 +45,7 @@ const handleClickAll= () =>{
                 </div>
 
                 <div id="all" onClick={handleClickAll}>
-                    <h2><Link to='/products'> All</Link> </h2>
+                    <h2><Link to='/productsAPI'> All</Link> </h2>
                 </div>
 
             </div>
@@ -56,7 +62,7 @@ const handleClickAll= () =>{
                     <p>Explore our wide range of furniture and decor designed to enhance your lifestyle.</p>
                     <br></br>
                     <div className="contenedorBotonHome">
-                    <Link to='/products' className="banner-button">
+                    <Link to='/ProductsAPI' className="banner-button">
                         <button id="buttonShopHome">Shop Now</button></Link>
                     </div>
                 </div>

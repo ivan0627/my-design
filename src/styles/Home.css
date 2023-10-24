@@ -10,8 +10,11 @@
 }
 .home_container h2{
     margin-left: 0.5em;
+    text-decoration: none;
 }
-
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 #live{
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../images/Home/home_live.jpg');
     min-width: 25%;
@@ -64,6 +67,7 @@ h2{
     display: flex;
     align-items: flex-end;
     margin-bottom: 1em;
+    
 }
 #kitchen:hover{
     -webkit-transition: background-image 0.2s ease-in-out;
@@ -187,3 +191,14 @@ h2{
     }
 
 }
+
+.carousel-inner{
+    width:640px;
+    height:360px;
+}
+
+.carousel-inner  .item  img {
+    width:640px;
+    height:360px;
+  }
+

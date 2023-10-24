@@ -18,7 +18,7 @@ function Navbar() {
         <nav className="navbar">
            <ul>
                 <li><Link to='/Home'>Home</Link></li>
-                <li><Link to='/products'>Products</Link></li>
+                <li><Link to='/ProductsAPI'>Products</Link></li>
                 <li><Link to='/furniture'>Furniture</Link></li>
                 <li><Link to='/kitchen'>Kitchen</Link></li>
                 <li><Link to='/Room'>Room</Link></li>
