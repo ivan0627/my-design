@@ -7,6 +7,7 @@ import Room from './Components/pages/Room'
 import About from './Components/pages/About'
 import Footer from './Components/Footer'
 import ProductsAPI from './Components/pages/ProductsAPI';
+import Maintenance from './Components/pages/Maintenance';
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/kitchen" element={<Kitchen category="kitchen"/>} />
           <Route path="/room" element={<Room category="room"/>} />
           <Route path="/about" element={<About />} />
+          <Route path="/maintenance" element={<Maintenance />} />
           {/* Default route */}
         <Route path="*" element={<Home />} />
         </Routes >

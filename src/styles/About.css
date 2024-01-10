@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2rem 2rem;
+
+}
+
+img{
+    max-width: 50%;
+    object-fit: cover;
+    margin: auto;
+    margin-left: 25%;
+}
+p{
+    font-size: 1.2rem;
+    margin: 1rem 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    p{
+        font-size: 1rem;
+        margin: 1rem 1rem;
+    }
+}

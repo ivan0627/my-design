@@ -14,11 +14,11 @@ app.use(express.json());
 //Create a item
 app.post('/items', async (req, res) => {
   try {
-    const { name, description, price, image } = req.body;
+    const {  name, description, price, image, type, category } = req.body;
 
     const newItem = await pool.query(
-      "INSERT INTO items (name, description, price, image) VALUES($1, $2, $3, $4) RETURNING *",
-      [name, description, price, image]
+      "INSERT INTO items (  name, description, price, image, type, category) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
+      [  name, description, price, image, type, category]
     );
 
     res.json(newItem.rows[0]);
@@ -50,6 +50,7 @@ app.get('/items/:id', async (req, res) => {
     console.error(err.message);
   }
 })
+//Get por tipo
 
 app.get('/items/type/:type', async (req, res) => {
   try {
@@ -61,6 +62,7 @@ app.get('/items/type/:type', async (req, res) => {
     console.error(err.message);
   }
 })
+//Get por categoria
 
 app.get('/items/category/:category', async (req, res) => {
   try {
